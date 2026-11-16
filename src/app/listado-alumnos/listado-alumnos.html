@@ -1,0 +1,238 @@
+<div class="layout-wrapper" [class.sidebar-collapsed]="!menuAbierto">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <svg class="brand-cap-icon" viewBox="0 0 64 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M32 4L4 17L32 30L60 17L32 4Z" fill="#FFFFFF" />
+        <path d="M14 23.5V31.5C14 35.5 22 40 32 40C42 40 50 35.5 50 31.5V23.5L32 32L14 23.5Z" fill="#FFFFFF" />
+        <path d="M11 20.5V31" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+        <circle cx="11" cy="32.5" r="2.3" fill="#FFFFFF" />
+      </svg>
+      <span class="brand-title">UPIIZ-IPN</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <button type="button" class="nav-item" [class.active]="seccionActiva === 'Alumnos'"
+        (click)="seleccionarSeccion('Alumnos')">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+        </svg>
+        <span>Alumnos</span>
+      </button>
+
+      <button type="button" class="nav-item" [class.active]="seccionActiva === 'Materias'"
+        (click)="seleccionarSeccion('Materias')">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z" />
+        </svg>
+        <span>Materias</span>
+      </button>
+
+      <button type="button" class="nav-item" [class.active]="seccionActiva === 'Reportes'"
+        (click)="seleccionarSeccion('Reportes')">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M5 9.2h3V19H5V9.2zM10.6 5h2.8v14h-2.8V5zm5.6 8H19v6h-2.8v-6z" />
+        </svg>
+        <span>Reportes</span>
+      </button>
+
+      <button type="button" class="nav-item" [class.active]="seccionActiva === 'Configuración'"
+        (click)="seleccionarSeccion('Configuración')">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29-.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" />
+        </svg>
+        <span>Configuración</span>
+      </button>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="ipn-emblem">
+        <img
+          class="ipn-logo-img"
+          src="https://onceninasyninos.tv/wp-content/uploads/2018/04/Banner-logos-ipn-e1523046221576.png"
+          alt="Logo IPN UPIIZ"
+        />
+        <span class="ipn-upiiz-label">UPIIZ</span>
+      </div>
+    </div>
+  </aside>
+
+  <div class="content-area">
+    <header class="topbar">
+      <button type="button" class="menu-toggle" (click)="alternarSidebar()" aria-label="Alternar menú">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+          <line x1="3" y1="6" x2="21" y2="6" stroke-linecap="round" />
+          <line x1="3" y1="12" x2="21" y2="12" stroke-linecap="round" />
+          <line x1="3" y1="18" x2="21" y2="18" stroke-linecap="round" />
+        </svg>
+      </button>
+
+      <div class="user-profile">
+        <div class="avatar-circle">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2.5c-3.33 0-10 1.67-10 5V22h20v-2.5c0-3.33-6.67-5-10-5z" />
+          </svg>
+        </div>
+        <span class="user-role">Profesor</span>
+        <svg class="chevron-down" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 7.5L10 12.5L15 7.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </header>
+
+    <main class="main-container">
+      <section class="dashboard-card">
+        <div class="section-title-row">
+          <svg class="title-group-icon" viewBox="0 0 36 28" fill="currentColor">
+            <circle cx="18" cy="8.5" r="5" />
+            <path d="M9.5 24c0-4.2 3.8-7.2 8.5-7.2s8.5 3 8.5 7.2v1.5h-17V24z" />
+            <circle cx="7.5" cy="10.5" r="3.8" />
+            <path d="M1 23.5c0-3.2 2.7-5.6 6.2-5.6 1.2 0 2.3.3 3.2.8-1.5 1.4-2.4 3.2-2.4 5.3v.8H1v-1.3z" />
+            <circle cx="28.5" cy="10.5" r="3.8" />
+            <path d="M35 23.5c0-3.2-2.7-5.6-6.2-5.6-1.2 0-2.3.3-3.2.8 1.5 1.4 2.4 3.2 2.4 5.3v.8H35v-1.3z" />
+          </svg>
+          <h1>Listado de alumnos</h1>
+        </div>
+
+        <div class="actions-row">
+          <button type="button" class="btn-ocultar" (click)="alternarTabla()">
+            <span class="plus-icon">+</span>
+            <span>{{ mostrarTabla ? 'Ocultar Tabla' : 'Mostrar Tabla' }}</span>
+          </button>
+        </div>
+
+        <div class="filters-box">
+          <div class="filter-group">
+            <label for="inputNombre">Ingrese Nombre</label>
+            <div class="search-box">
+              <input id="inputNombre" type="text" placeholder="Alumno a buscar" [(ngModel)]="nombreBusqueda" />
+              <button type="button" class="search-btn" aria-label="Buscar alumno">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.1">
+                  <circle cx="8.5" cy="8.5" r="5.5" />
+                  <line x1="12.7" y1="12.7" x2="17" y2="17" stroke-linecap="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <label for="selectCarrera">Ingrese Carrera</label>
+            <div class="select-box">
+              <select id="selectCarrera" [(ngModel)]="carreraSeleccionada">
+                @for (carrera of carreras; track carrera) {
+                <option [value]="carrera">{{ carrera }}</option>
+                }
+              </select>
+              <svg class="select-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        @if (mostrarTabla) {
+        <div class="table-wrapper">
+          <table class="alumnos-table">
+            <thead>
+              <tr>
+                <th class="col-num">#</th>
+                <th class="col-matricula">Matrícula</th>
+                <th class="col-nombre">Nombre</th>
+                <th class="col-carrera">Carrera</th>
+                <th class="col-semestre">Semestre</th>
+                <th class="col-status">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (alumno of alumnosFiltrados; track alumno.id) {
+              <tr>
+                <td class="col-num">{{ alumno.id }}</td>
+                <td class="col-matricula">{{ alumno.matricula }}</td>
+                <td class="col-nombre">{{ alumno.nombre }}</td>
+                <td class="col-carrera">{{ alumno.carrera }}</td>
+                <td class="col-semestre">{{ alumno.semestre }}</td>
+                <td class="col-status">
+                  <span class="badge-status" [ngClass]="{
+                          'badge-activo': alumno.status === 'Activo',
+                          'badge-baja': alumno.status === 'Baja temporal',
+                          'badge-egresado': alumno.status === 'Egresado'
+                        }">
+                    {{ alumno.status }}
+                  </span>
+                </td>
+              </tr>
+              } @empty {
+              <tr>
+                <td colspan="6" class="empty-row">
+                  No se encontraron alumnos con los criterios seleccionados.
+                </td>
+              </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+        }
+
+        <div class="stats-section">
+          <div class="stats-title-row">
+            <svg class="stats-bar-icon" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="3" y="13" width="4.2" height="8" rx="1" />
+              <rect x="9.8" y="8" width="4.2" height="13" rx="1" />
+              <rect x="16.6" y="3" width="4.2" height="18" rx="1" />
+            </svg>
+            <h2>Estadísticas</h2>
+          </div>
+
+          <div class="stats-cards">
+            <div class="stat-card card-blue">
+              <div class="stat-icon-circle circle-blue">
+                <svg viewBox="0 0 36 28" fill="currentColor">
+                  <circle cx="18" cy="9" r="4.8" />
+                  <path d="M10 23.5c0-3.9 3.6-6.8 8-6.8s8 2.9 8 6.8v1.2H10v-1.2z" />
+                  <circle cx="8" cy="11" r="3.6" />
+                  <path d="M2 23c0-3 2.5-5.2 5.8-5.2 1.1 0 2.1.3 3 .7-1.4 1.3-2.2 3-2.2 4.9v.6H2V23z" />
+                  <circle cx="28" cy="11" r="3.6" />
+                  <path d="M34 23c0-3-2.5-5.2-5.8-5.2-1.1 0-2.1.3-3 .7 1.4 1.3 2.2 3 2.2 4.9v.6H34V23z" />
+                </svg>
+              </div>
+              <div class="stat-info">
+                <span class="stat-label">Total alumnos:</span>
+                <span class="stat-value">{{ totalAlumnos }}</span>
+              </div>
+            </div>
+
+            <div class="stat-card card-green">
+              <div class="stat-icon-circle circle-green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2">
+                  <path d="M5 12.5L9.8 17.3L19 7.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="stat-info">
+                <span class="stat-label">Total activos:</span>
+                <span class="stat-value">{{ totalActivos }}</span>
+              </div>
+            </div>
+
+            <div class="stat-card card-purple">
+              <div class="stat-icon-circle circle-purple">
+                <svg viewBox="0 0 64 44" fill="currentColor">
+                  <path d="M32 5L5 17.5L32 30L59 17.5L32 5Z" />
+                  <path d="M15 24V31.5C15 35.2 22.5 39.5 32 39.5C41.5 39.5 49 35.2 49 31.5V24L32 32L15 24Z" />
+                  <path d="M53 20V31.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+                  <circle cx="53" cy="33" r="2.5" />
+                </svg>
+              </div>
+              <div class="stat-info">
+                <span class="stat-label">Total egresados:</span>
+                <span class="stat-value">{{ totalEgresados }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
